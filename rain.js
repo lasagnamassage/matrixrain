@@ -1,8 +1,8 @@
 var body = document.body;
 var startY = 0;
-var endY = 25;
+var endY = 25; //pixel unit
 var startX = 0;
-var endX = 97;
+var endX = 97; //percentage unit
 var vMin = 5;
 var vMax = 20;
 var letterbag = [];
