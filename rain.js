@@ -142,17 +142,20 @@ var Letter = function(symbol,xPos,velocity)
 	this.xPos=xPos;
 	this.yPos=startY;
 	this.velocity=velocity;
+	this.opacity=1;
 	this.draw = function() {
 		var node = document.createElement("DIV");
 		node.style.position="absolute";
 		node.style.marginLeft = this.xPos + "%";
 		node.style.marginTop = this.yPos + "px";
+		node.style.opacity = this.opacity;
 		var textnode = document.createTextNode(symbol);
 		node.appendChild(textnode);
 		document.body.appendChild(node);
 	};
 	this.update = function() {
 		this.yPos+=velocity;
+		this.opacity-=0.02;
 	}
 }
 
